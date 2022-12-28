@@ -1,0 +1,8 @@
+configurar um proxy reverso (nginx)
+configurar aplicação no proxy
+vamos rodar com o PM2
+e vamos configurar um dominio personalizado na CloudFlare
+
+
+ter comprado o dominio no registro.br ou goddady
+ter um cartão de crédito válido para criar a conta na Digital Ocean

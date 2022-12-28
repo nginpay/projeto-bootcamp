@@ -21,6 +21,9 @@ module.exports = {
       slug: {
         type: Sequelize.STRING
       },
+      imageUrl: {
+        type: Sequelize.STRING
+      },
       preco: {
         type: Sequelize.INTEGER
       },

@@ -1,0 +1,7 @@
+transacionar bd.
+
+-> procedures
+-> triggers
+-> views
+
+selects eram feitas acessando views
