@@ -5,7 +5,7 @@ module.exports = app => {
     const storeController = require('../controller/store.controller')
     const productController = require('../controller/product.controller')
 
-    router.get('/user', userController.hello)
+    router.get('/users', userController.listUsers)
     router.post('/user', userController.createUser)
 
     router.post('/category', categoryController.createCategory)

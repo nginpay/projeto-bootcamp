@@ -24,7 +24,7 @@ exports.createCategory = async (req, res, next) => {
 
     const categoryAdded = await Category.create(newCategory)
 
-    return res.json(categoryAdded)
+    return res.status(201).json(categoryAdded)
 }
 
 exports.listCategories = async (req, res, next) => {

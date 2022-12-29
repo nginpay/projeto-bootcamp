@@ -5,7 +5,13 @@ app.use(express.json())
 
 app.get('/', (req, res) => {
     return res.status(200).json({
-        marketplace: true
+        msg: true
+    })
+})
+
+app.get('/hello', (req, res) => {
+    return res.status(200).json({
+        Hello: 'Hello'
     })
 })
 

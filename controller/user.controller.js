@@ -23,17 +23,30 @@ exports.createUser = async (req, res, next) => {
         senha: hashpassword
     }
 
+
+    const userValidate = await User.findOne({where: {email}})
+
+    if(userValidate){
+        return res.status(302).json({msg: 'User exist'})
+    }
+
     //3. gravar na base de dados
     const userAdded = await User.create(newUser)
+
 
     //4. envia email de confirmação
     mail.send(email, `Bem vindo ${nome}`, `Bem vindo à plataforma XPTO.`);
 
     //5. exibir o resultado
-    return res.json(userAdded)
+    return res.status(201).json(userAdded)
 }
 
 
+exports.listUsers = async (req, res, next) => {
+    const usersList = await User.findAll()
+
+    return res.status(200).json(usersList)
+}
 //autenticação usando o jwt
 //middleware de autenticação - ctrl+c/crtl+v
 //incluimos o middleware nas rotas privadas
